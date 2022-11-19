@@ -18,6 +18,7 @@
 		9AEEA4872928CBD6005B197E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 9AEEA4862928CBD6005B197E /* ComposableArchitecture */; };
 		9AEEA4892928CBD6005B197E /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 9AEEA4882928CBD6005B197E /* Dependencies */; };
 		9AEEA48C2928CCF3005B197E /* LoginScreenReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEA48B2928CCF3005B197E /* LoginScreenReducerTests.swift */; };
+		9AEEA48E2928DC2C005B197E /* LoginScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEA48D2928DC2C005B197E /* LoginScreenFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		9AEEA4782928CB0C005B197E /* TDDTCAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDTCAUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9AEEA48A2928CCF2005B197E /* TDDTCATests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TDDTCATests-Bridging-Header.h"; sourceTree = "<group>"; };
 		9AEEA48B2928CCF3005B197E /* LoginScreenReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenReducerTests.swift; sourceTree = "<group>"; };
+		9AEEA48D2928DC2C005B197E /* LoginScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				9AEEA45E2928CB0C005B197E /* Assets.xcassets */,
 				9AEEA4602928CB0C005B197E /* LaunchScreen.storyboard */,
 				9AEEA4632928CB0C005B197E /* Info.plist */,
+				9AEEA48D2928DC2C005B197E /* LoginScreenFeature.swift */,
 			);
 			path = TDDTCA;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AEEA48E2928DC2C005B197E /* LoginScreenFeature.swift in Sources */,
 				9AEEA45A2928CB0A005B197E /* ViewController.swift in Sources */,
 				9AEEA4562928CB0A005B197E /* AppDelegate.swift in Sources */,
 				9AEEA4582928CB0A005B197E /* SceneDelegate.swift in Sources */,
