@@ -9,27 +9,34 @@ import ComposableArchitecture
 import XCTest
 
 struct LoginScreenFeature: ReducerProtocol {
-    struct State {
-        
+    struct State: Equatable {
+        var emailText: String = ""
     }
     
     enum Action {
-        
+        case onEmailTextFieldChanged(text: String)
     }
     
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
         switch action {
             
+        case let .onEmailTextFieldChanged(text):
+            state.emailText = text
+            return .none
         }
     }
 }
 
 final class LoginScreenReducerTests: XCTestCase {
 
-    func test_init_isInInitialState() {
+    func test_onEmailTextFieldChanged_shouldSaveEmailState() {
         let store = TestStore(
             initialState: LoginScreenFeature.State(),
             reducer: LoginScreenFeature()
         )
+        
+        store.send(.onEmailTextFieldChanged(text: "arifin")) { state in
+            state.emailText = "arifin"
+        }
     }
 }
