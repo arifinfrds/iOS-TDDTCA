@@ -30,13 +30,14 @@ struct LoginScreenFeature: ReducerProtocol {
 final class LoginScreenReducerTests: XCTestCase {
 
     func test_onEmailTextFieldChanged_shouldSaveEmailState() {
+        let typedText = "arifin"
         let store = TestStore(
             initialState: LoginScreenFeature.State(),
             reducer: LoginScreenFeature()
         )
         
-        store.send(.onEmailTextFieldChanged(text: "arifin")) { state in
-            state.emailText = "arifin"
+        store.send(.onEmailTextFieldChanged(text: typedText)) { state in
+            state.emailText = typedText
         }
     }
 }
