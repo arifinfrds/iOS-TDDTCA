@@ -26,10 +26,20 @@ struct LoginScreenFeature: ReducerProtocol {
             
         case let .onEmailTextFieldChanged(text):
             state.emailText = text
+            
+            if !text.isEmpty {
+                state.errorMessage = nil
+            }
+            
             return .none
             
         case let .onPasswordTextFieldChanged(text):
             state.passwordText = text
+            
+            if !text.isEmpty {
+                state.errorMessage = nil
+            }
+            
             return .none
             
         case .onLoginButtonTapped:
@@ -73,6 +83,48 @@ final class LoginScreenReducerTests: XCTestCase {
         
         store.send(.onLoginButtonTapped) { state in
             state.errorMessage = "Email and password should not be empty"
+        }
+    }
+    
+    func test_onEmailTextFieldChanged_shouldResetsErrorMessageWhenEmailIsNotEmpty() {
+        let store = TestStore(
+            initialState: LoginScreenFeature.State(
+                emailText: "",
+                passwordText: "not empty password",
+                errorMessage: "Email and password should not be empty"
+            ),
+            reducer: LoginScreenFeature()
+        )
+        
+        store.send(.onEmailTextFieldChanged(text: "a")) { state in
+            state.emailText = "a"
+            state.errorMessage = nil
+        }
+        
+        store.send(.onEmailTextFieldChanged(text: "")) { state in
+            state.emailText = ""
+            state.errorMessage = nil
+        }
+    }
+    
+    func test_onPasswordTextFieldChanged_shouldResetsErrorMessageWhenEmailIsNotEmpty() {
+        let store = TestStore(
+            initialState: LoginScreenFeature.State(
+                emailText: "not empty email",
+                passwordText: "",
+                errorMessage: "Email and password should not be empty"
+            ),
+            reducer: LoginScreenFeature()
+        )
+        
+        store.send(.onPasswordTextFieldChanged(text: "a")) { state in
+            state.passwordText = "a"
+            state.errorMessage = nil
+        }
+        
+        store.send(.onPasswordTextFieldChanged(text: "")) { state in
+            state.passwordText = ""
+            state.errorMessage = nil
         }
     }
 }
