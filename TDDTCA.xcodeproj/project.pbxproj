@@ -13,9 +13,11 @@
 		9AEEA45D2928CB0A005B197E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AEEA45B2928CB0A005B197E /* Main.storyboard */; };
 		9AEEA45F2928CB0C005B197E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AEEA45E2928CB0C005B197E /* Assets.xcassets */; };
 		9AEEA4622928CB0C005B197E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AEEA4602928CB0C005B197E /* LaunchScreen.storyboard */; };
-		9AEEA46D2928CB0C005B197E /* TDDTCATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEA46C2928CB0C005B197E /* TDDTCATests.swift */; };
 		9AEEA4772928CB0C005B197E /* TDDTCAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEA4762928CB0C005B197E /* TDDTCAUITests.swift */; };
 		9AEEA4792928CB0C005B197E /* TDDTCAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEA4782928CB0C005B197E /* TDDTCAUITestsLaunchTests.swift */; };
+		9AEEA4872928CBD6005B197E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 9AEEA4862928CBD6005B197E /* ComposableArchitecture */; };
+		9AEEA4892928CBD6005B197E /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 9AEEA4882928CBD6005B197E /* Dependencies */; };
+		9AEEA48C2928CCF3005B197E /* LoginScreenReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEA48B2928CCF3005B197E /* LoginScreenReducerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +47,11 @@
 		9AEEA4612928CB0C005B197E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AEEA4632928CB0C005B197E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AEEA4682928CB0C005B197E /* TDDTCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDTCATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AEEA46C2928CB0C005B197E /* TDDTCATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDTCATests.swift; sourceTree = "<group>"; };
 		9AEEA4722928CB0C005B197E /* TDDTCAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDTCAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEEA4762928CB0C005B197E /* TDDTCAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDTCAUITests.swift; sourceTree = "<group>"; };
 		9AEEA4782928CB0C005B197E /* TDDTCAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDTCAUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9AEEA48A2928CCF2005B197E /* TDDTCATests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TDDTCATests-Bridging-Header.h"; sourceTree = "<group>"; };
+		9AEEA48B2928CCF3005B197E /* LoginScreenReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenReducerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AEEA4872928CBD6005B197E /* ComposableArchitecture in Frameworks */,
+				9AEEA4892928CBD6005B197E /* Dependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +118,8 @@
 		9AEEA46B2928CB0C005B197E /* TDDTCATests */ = {
 			isa = PBXGroup;
 			children = (
-				9AEEA46C2928CB0C005B197E /* TDDTCATests.swift */,
+				9AEEA48B2928CCF3005B197E /* LoginScreenReducerTests.swift */,
+				9AEEA48A2928CCF2005B197E /* TDDTCATests-Bridging-Header.h */,
 			);
 			path = TDDTCATests;
 			sourceTree = "<group>";
@@ -143,6 +149,10 @@
 			dependencies = (
 			);
 			name = TDDTCA;
+			packageProductDependencies = (
+				9AEEA4862928CBD6005B197E /* ComposableArchitecture */,
+				9AEEA4882928CBD6005B197E /* Dependencies */,
+			);
 			productName = TDDTCA;
 			productReference = 9AEEA4522928CB0A005B197E /* TDDTCA.app */;
 			productType = "com.apple.product-type.application";
@@ -198,6 +208,7 @@
 					};
 					9AEEA4672928CB0C005B197E = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
 						TestTargetID = 9AEEA4512928CB0A005B197E;
 					};
 					9AEEA4712928CB0C005B197E = {
@@ -215,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 9AEEA4492928CB0A005B197E;
+			packageReferences = (
+				9AEEA4852928CBD6005B197E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 9AEEA4532928CB0A005B197E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -268,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AEEA46D2928CB0C005B197E /* TDDTCATests.swift in Sources */,
+				9AEEA48C2928CCF3005B197E /* LoginScreenReducerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,14 +503,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = arifinfrds.com.TDDTCATests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "TDDTCATests/TDDTCATests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDDTCA.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TDDTCA";
@@ -508,14 +530,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = arifinfrds.com.TDDTCATests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "TDDTCATests/TDDTCATests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDDTCA.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TDDTCA";
@@ -596,6 +625,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9AEEA4852928CBD6005B197E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9AEEA4862928CBD6005B197E /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AEEA4852928CBD6005B197E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		9AEEA4882928CBD6005B197E /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AEEA4852928CBD6005B197E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = Dependencies;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9AEEA44A2928CB0A005B197E /* Project object */;
 }
