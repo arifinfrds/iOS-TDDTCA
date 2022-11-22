@@ -44,6 +44,11 @@ struct LoginScreenFeature: ReducerProtocol {
             
         case .onLoginButtonTapped:
             
+            if state.emailText.isEmpty && state.passwordText.isEmpty {
+                state.errorMessage = "Email and Password should not be empty"
+                return .none
+            }
+            
             if state.emailText.isEmpty {
                 state.errorMessage = "Email should not be empty"
                 return .none
