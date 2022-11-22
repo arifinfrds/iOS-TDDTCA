@@ -12,9 +12,6 @@ struct LoginView: View {
     
     let store: StoreOf<LoginScreenFeature>
     
-    @State private var emailText = ""
-    @State private var passwordText = ""
-    
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             VStack(spacing: 8) {
