@@ -16,7 +16,8 @@ final class LoginViewSnapshotTests: XCTestCase {
     func test_snapshot_shouldInInitialState() {
         let sut = makeSUT()
         
-        assertSnapshot(matching: sut, as: .image(on: .iPhone13))
+        assertSnapshot(matching: sut, as: .image(on: .iPhone13, traits: UITraitCollection(userInterfaceStyle: .light)))
+        assertSnapshot(matching: sut, as: .image(on: .iPad10_2, traits: UITraitCollection(userInterfaceStyle: .dark)))
     }
     
     func test_snapshot_shouldShowEmailTextOnNonEmptyEmail() {
