@@ -20,6 +20,8 @@
 		9AEEA4892928CBD6005B197E /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 9AEEA4882928CBD6005B197E /* Dependencies */; };
 		9AEEA48C2928CCF3005B197E /* LoginScreenReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEA48B2928CCF3005B197E /* LoginScreenReducerTests.swift */; };
 		9AEEA48E2928DC2C005B197E /* LoginScreenFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEA48D2928DC2C005B197E /* LoginScreenFeature.swift */; };
+		9AF7833329536A6C006E6B06 /* LoginViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7833229536A6C006E6B06 /* LoginViewSnapshotTests.swift */; };
+		9AF7833629536B51006E6B06 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF7833529536B51006E6B06 /* SnapshotTesting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,7 @@
 		9AEEA48A2928CCF2005B197E /* TDDTCATests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TDDTCATests-Bridging-Header.h"; sourceTree = "<group>"; };
 		9AEEA48B2928CCF3005B197E /* LoginScreenReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenReducerTests.swift; sourceTree = "<group>"; };
 		9AEEA48D2928DC2C005B197E /* LoginScreenFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenFeature.swift; sourceTree = "<group>"; };
+		9AF7833229536A6C006E6B06 /* LoginViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF7833629536B51006E6B06 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +130,7 @@
 			children = (
 				9AEEA48B2928CCF3005B197E /* LoginScreenReducerTests.swift */,
 				9AEEA48A2928CCF2005B197E /* TDDTCATests-Bridging-Header.h */,
+				9AF7833229536A6C006E6B06 /* LoginViewSnapshotTests.swift */,
 			);
 			path = TDDTCATests;
 			sourceTree = "<group>";
@@ -177,6 +182,9 @@
 				9AEEA46A2928CB0C005B197E /* PBXTargetDependency */,
 			);
 			name = TDDTCATests;
+			packageProductDependencies = (
+				9AF7833529536B51006E6B06 /* SnapshotTesting */,
+			);
 			productName = TDDTCATests;
 			productReference = 9AEEA4682928CB0C005B197E /* TDDTCATests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -234,6 +242,7 @@
 			mainGroup = 9AEEA4492928CB0A005B197E;
 			packageReferences = (
 				9AEEA4852928CBD6005B197E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				9AF7833429536B51006E6B06 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = 9AEEA4532928CB0A005B197E /* Products */;
 			projectDirPath = "";
@@ -290,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF7833329536A6C006E6B06 /* LoginViewSnapshotTests.swift in Sources */,
 				9AEEA48C2928CCF3005B197E /* LoginScreenReducerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,6 +653,14 @@
 				minimumVersion = 0.9.0;
 			};
 		};
+		9AF7833429536B51006E6B06 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -655,6 +673,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9AEEA4852928CBD6005B197E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = Dependencies;
+		};
+		9AF7833529536B51006E6B06 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF7833429536B51006E6B06 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
